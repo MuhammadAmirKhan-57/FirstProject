@@ -40,12 +40,12 @@ class _GridViewScreenState extends State<GridViewScreen> {
           'My category',
           style: TextStyle(
             fontSize: 20,
-            color: Color(0xff0E0E0E),
+            color: Color(0xffFFFFFF),
             fontWeight: FontWeight.w700,
           ),
         ),
-        leading: Icon(Icons.arrow_back, size: 25, color: Color(0xff282828)),
-        backgroundColor: Colors.white,
+        leading: Icon(Icons.arrow_back, size: 25, color: Color(0xffFFFFFF)),
+        backgroundColor: Colors.lightBlue,
         elevation: 0,
       ),
       body: Padding(
@@ -92,12 +92,17 @@ class _GridViewScreenState extends State<GridViewScreen> {
                             categorylist[i].image,
                             width: 30,
                             height: 30,
+                            color: isSelected
+                                  ? Colors.lightBlue
+                                  : Colors.grey,
                           ),
                           Text(
                             categorylist[i].title,
                             style: TextStyle(
                               fontSize: 15,
-                              color: Color(0xff505050),
+                               color: isSelected
+                                  ? Colors.lightBlue
+                                  : Colors.grey,
                             ),
                           ),
                           IconButton(
